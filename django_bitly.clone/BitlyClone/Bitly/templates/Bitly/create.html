@@ -1,0 +1,12 @@
+{% extends 'Bitly/_base.html' %}
+
+{% block content%} 
+{%load crispy_forms_tags %} 
+<div class="container">
+<form action="" method="POST">
+{% csrf_token %}
+{{ forms|crispy }}
+<input type="submit" class="btn-primary" value="create!">
+</form>
+</div>
+{% endblock %}

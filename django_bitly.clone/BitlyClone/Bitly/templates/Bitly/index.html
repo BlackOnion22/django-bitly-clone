@@ -1,0 +1,21 @@
+{% extends 'Bitly/_base.html' %}
+
+{% block content %}
+
+<div class="container"> 
+<div class="row py-3">
+    {% for i in all_links %}
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name}}</h5>
+          <p class="card-text">{{i.url}}</p>
+          <a href="{% url 'out-link' i.slug%}">http://127.0.0.1:8000/{{i.slug}}</a>
+        </div>
+      </div>
+    </div>
+    {%endfor %}
+</div>
+</div>
+    {% endblock%}
+
